@@ -1,18 +1,15 @@
-# Tableau Homework - Citi Bike Analytics
+## CitiBike & COVID19 - Did Bike usage increase or decrease?  Were there any demographic factors?
 
-### Before You Begin
+What happened to the Citi Bike system when COVID19 hit?  Did bike usage decrease as restrictions were in place?  As cases increased quickly, did the length of trips decrease?  Were there any demographic factors such as median income, profession or age in certain areas covered by the New Jersey area of Citi Bike?
 
-* This assignment will be saved to your Tableau Public account rather than GitHub. 
+The task required were to build the following in Tableau:
 
-* If you haven't already, be sure to create a Tableau Public account [here](https://public.tableau.com/s/).
+1. Create 4 -10 Visualisations
+2. 2 Dashboards
+3. An officifal city map
+4. A story
 
-* The free tier of Tableau only lets you save to their public server. This means that each time you save your file it will be uploaded to your Tableau Public profile. 
-
-* You are able to load and continue working on the same workbook.
-
-* When you are finished with your assignment, you will turn in the URL to your Tableau Public workbook along with any additional files used for your analysis. 
-
-## Background
+### Background
 
 ![Citi-Bikes](Images/citi-bike-station-bikes.jpg)
 
@@ -25,123 +22,47 @@ Through the team's efforts, each month bike data is collected, organized, and ma
 However, while the data has been regularly updated, the team has yet to implement a dashboard or sophisticated reporting process. 
 City officials have a number of questions on the program, so your first task on the job is to build a set of data reports to provide the answers.
 
-## Task
+### Summary of work completed
 
-**Your task in this assignment is to aggregate the data found in the Citi Bike Trip History Logs and find two unexpected phenomena.** 
+1. Obtained data from https://www.citibikenyc.com/system-data
+2. Obtained NYC COVID data from https://covidtracking.com/data/download
+3. Imported, sorted, joined and cleaned data in a Jupyter Notebook
+4. Imported cleaned data into Tableau Public
+5. Created visualisations to understand the following 2 questions:
 
-**Design 2-5 visualizations for each discovered phenomena (4-10 total). You may work with a timespan of your choosing. Optionally, 
-you may merge multiple datasets from different periods.** 
+### 1. Did bike usage decrease once COVID19 hit New York City / New Jersey
+### 2. Were the demographic factors that may have influenced the bike usage since the pandemic started
 
-**The following are some questions you may wish to tackle. Do not limit yourself to these questions; 
-they are suggestions for a starting point. Be creative!**
+## Key Findings
 
-* How many trips have been recorded total during the chosen period?
+#### 1. Bike usage (total trips made) decreased when COVID hit.
 
-* By what percentage has total ridership grown?
+![Citi-Bikes](Images/storybook1.png)
 
-* How has the proportion of short-term customers and annual subscribers changed?
+#### 2. Trip Duration (Total Minutes) decreased by about 75k over 8 weeks (weeks 13 - 17), but then increased by approximately 100k in the space of a week (week 18)  There were two further 100k plus minutes per week spikes in usage over the next 4 weeks.
 
-* What are the peak hours in which bikes are used during summer months?
+![Citi-Bikes](Images/storybook2.png)
 
-* What are the peak hours in which bikes are used during winter months?
+#### 3. The average trip duration duration significantly increased in 2 weeks from about 12 minutes to about 58 minutes.  Trips were taken less but the trip duration was longer.  This was unexpected.
 
-* Today, what are the top 10 stations in the city for starting a journey? (Based on data, why do you hypothesize these are the top locations?)
+![Citi-Bikes](Images/storybook3.png)
 
-* Today, what are the top 10 stations in the city for ending a journey? (Based on data, why?)
+#### 4. Average trip duration peaked approximately 2 weeks before the height of the pandemic.  This was also unexpected and interesting.
 
-* Today, what are the bottom 10 stations in the city for starting a journey? (Based on data, why?)
+![Citi-Bikes](Images/storybook4.png)
 
-* Today, what are the bottom 10 stations in the city for ending a journey (Based on data, why?)
+#### 5. Grove Street, which has the highest usage from January to August 2020, did not feature in the top 30 for usage in the height of the pandemic.  Conversely, Stations such as Fairmount Ave, had a significant jump in average trip durations.  Could these been due to demographic factors?  Walking in certain areas?
 
-* Today, what is the gender breakdown of active participants (Male v. Female)?
+![Citi-Bikes](Images/storybook6a.png)
+![Citi-Bikes](Images/storybook8a.png)
 
-* How effective has gender outreach been in increasing female ridership over the timespan?
+#### 6. There were some demographic factors, with areas such as Fairmont Avenue & Heights Elevator having significant bike usage increases during the pandemic.  Theses areas are not in the top median income bands.
 
-* How does the average trip duration change by age?
+![Citi-Bikes](Images/storybook12.png)
 
-* What is the average distance in miles that a bike is ridden?
-
-* Which bikes (by ID) are most likely due for repair or inspection in the timespan?
-
-* How variable is the utilization by bike ID?
-
-**Next, as a chronic over-achiever:**
-
-* Use your visualizations (does not have to be all of them) to design a dashboard for each phenomena.
-* The dashboards should be accompanied with an analysis explaining why the phenomena may be occuring. 
-
-**City officials would also like to see one of the following visualizations:**
-
-* **Basic:** A static map that plots all bike stations with a visual indication of the most popular locations to start and end a journey with zip code data overlaid on top.
-
-* **Advanced:** A dynamic map that shows how each station's popularity changes over time (by month and year). Again, with zip code data overlaid on the map.
-
-* The map you choose should also be accompanied by a write-up unveiling any trends that were noticed during your analysis.
-
-**Finally, create your final presentation**
-
-* Create a Tableau story that brings together the visualizations, requested maps, and dashboards.
-* This is what will be presented to the officials, so be sure to make it professional, logical, and visually appealing. 
-
-## Considerations
-
-Remember, the people reading your analysis will **NOT** be data analysts. Your audience will be city officials, public administrators, and heads of New York City departments. Your data and analysis needs to be presented in a way that is focused, concise, easy-to-understand, and visually compelling. Your visualizations should be colorful enough to be included in press releases, and your analysis should be thoughtful enough for dictating programmatic changes. 
-
-## Submission 
-
-Your final submission should include:
-
-* A link to your Tableau Public workbook that includes: 
-  * 4-10 Total "Phenomenon" Visualizations 
-  * 2 Dashboards
-  * 1 City Official Map
-  * 1 Story 
-* A text or markdown file with your analysis on the phenomenons you uncovered from the data.
-
-## Sharing Your Work
-In order to share your work, we are asking that you will save your workbook as a .twbx file so that your TA's can grade them.
-
-To save your workbook as a .twbx file, you will just need to select "Save As..." from the "File" dropdown. Then, select the .twbx option.
-
-## Assessment
-
-Your final product will be assessed on the following metrics:
-
-* Analytic Rigor
-
-* Readability
-
-* Visual Attraction
+For further charting and analysis, please visit the Tableau public notebook at https://public.tableau.com/profile/tas.tudor#!/vizhome/CitiBike_COVID19/KeyStatsDashboard1
 
 
-## Hints
 
-* You may need to get creative in how you combine each of the CSV files. Don't just assume Tableau is the right tool for the job. At this point, you have a wealth of technical skills and research abilities. Dig for an approach that works and just go with it.
 
-* Don't just assume the CSV format hasn't changed since 2013. Subtle changes to the formats in any of your columns can blockade your analysis. Ensure your data is consistent and clean throughout your analysis. (Hint: Start and End Time change at some point in the history logs).
 
-* Consider building your visualizations with small extracts of the data (i.e. single files) before attempting to import the whole thing. What you will find is that importing all 20+ million records of data will create performance issues quickly. Welcome to "Big Data."
-
-* While utilizing all of the data may seem like a nice power play, consider the time-course in making your analysis. Is data from 2013 the most relevant for making bike replacement decisions today? Probably not. Don't let overwhelming data fool you. Ground your analysis in common sense.
-
-* Remember, data alone doesn't "answer" anything. You will need to accompany your data visualizations with clear and directed answers and analysis.
-
-* As is often the case, your clients are asking for a LOT of answers. Be considerate about their need-to-know and the importance of not "cramming in everything". Of course, answer each question, but do so in a way that is organized and presentable.
-
-* Since this is a project for the city, spend the appropriate time thinking through decisions on color schemes, fonts, and visual story-telling. The Citi Bike program has a clear visual footprint. As a suggestion, look for ways to have your data visualizations match their aesthetic tones.
-
-* Pay attention to labels. What exactly is "time duration"? What's the value of "age of birth"? You will almost certainly need calculated fields to get what you need.
-
-* Keep a close eye for obvious outliers or false data. Not everyone who signs up for the program is answering honestly.
-
-* In answering the question of "why" a phenomenon is occurring, consider adding other pieces of information on socioeconomic or other geographic data. Tableau has a map "layer" feature that you may find handy.
-
-* Don't be afraid to manipulate your data and play with settings in Tableau. Tableau is meant to be explored. We haven't covered all that you need -- so you will need to keep an eye out for new tricks.
-
-* Treat this as a serious endeavor! This is an opportunity to show future employers that you have what it takes to be a top-notch analyst. 
-
-* Good luck!
-
-### Copyright
-
-Data Boot Camp © 2019. All Rights Reserved.
